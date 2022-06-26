@@ -30,6 +30,15 @@ body {
     font-weight: 400;
 }
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 2px solid tomato;
+}
+
 .link {
     text-decoration: none;
 }
@@ -84,22 +93,41 @@ body {
     color: var(--accent-color);
 }
 
-.header-nav a {
-    color: var(--title-text-color);
+.header-nav {
+    display: flex; 
+}
 
+.header-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
 .header-nav .link:hover,
 .header-nav .link:focus {
     color: var(--accent-color);
 }
 
+.header-contacts {
+    display: flex;
+}
+
+.header-contacts .item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .header-contacts .link {
     color: var(--secondary-text-color);
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
