@@ -16,9 +16,15 @@
   --secondary-page-color: #f5f4fa;
   --hero-footer-color: #2f303a;
   --button-hover: #188ce8;
+
+  --work-list-gap: 30px;
 }
 
 /* общие */
+
+img {
+  display: block;
+}
 
 body {
   background-color: var(--white-color);
@@ -35,7 +41,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
 }
 
 .link {
@@ -358,11 +363,16 @@ p {
 .button-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .button-list .button {
+  padding: 6px 22px;
+  border-radius: 4px;
+
   background-color: var(--secondary-page-color);
   color: var(--title-text-color);
+  border: var(--secondary-page-color);
   cursor: pointer;
 
   font-family: inherit;
@@ -378,9 +388,15 @@ p {
   color: var(--white-color);
 }
 
+.button-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 /* Примеры работ */
 
 .work-list .title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -390,4 +406,24 @@ p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * var(--work-list-gap));
+  margin-top: calc(-1 * var(--work-list-gap));
+}
+
+.work-list > .item {
+  flex-basis: calc(100% / 3 - var(--work-list-gap));
+
+  margin-left: var(--work-list-gap);
+  margin-top: var(--work-list-gap);
+}
+
+.card-content {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
